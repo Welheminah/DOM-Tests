@@ -38,7 +38,7 @@ describe('The textBillTotal factory function for the Text Bill Widget', function
 
     describe("warning and critical level", function(){
 
-        it("it should return a class name of 'warning' if warning level is reached", function(){
+        it("it should return a class name of 'warning' if warning level is reached(the amount is between 30 & 49)", function(){
             let calcuTextBill = textBillTotal();
     
             calcuTextBill.textBills("sms");
@@ -68,7 +68,7 @@ describe('The textBillTotal factory function for the Text Bill Widget', function
             
             assert.equal("warning", calcuTextBill.totalClassName());
         });
-        it("it should return a class name of 'critical' if  critical level is reached", function(){
+        it("it should return a class name of 'critical' if  critical level is reached(the amount is over 50)", function(){
             let calcuTextBill = textBillTotal();
     
             calcuTextBill.textBills("sms");

@@ -35,7 +35,7 @@ describe('The totalPhoneBill for the Radio Bill Widget factory function', functi
 
     describe("warning and critical level", function(){
 
-        it("it should return a class name of 'warning' if warning level is reached", function(){
+        it("it should return a class name of 'warning' if warning level is reached(the total is between 30 & 49", function(){
             let radioWidget = textBillTotals();
 
             radioWidget.radioBillTotal("sms");
@@ -56,7 +56,7 @@ describe('The totalPhoneBill for the Radio Bill Widget factory function', functi
             assert.equal("warning", radioWidget.totalClassName());
             
         });
-        it("it should return a class name of 'critical' if  critical level is reached", function(){
+        it("it should return a class name of 'critical' if  critical level is reached(the amount is over 50)", function(){
             let radioWidget = textBillTotals();
 
             radioWidget.radioBillTotal("sms");
