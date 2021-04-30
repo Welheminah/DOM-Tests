@@ -11,7 +11,7 @@ function totalPhoneBill(billString){
         else if (billItem === "sms"){
             billTotal += 0.75;
         }
-        
+
     }
-    return billTotal;
+    return billTotal.toFixed(2);
  }
