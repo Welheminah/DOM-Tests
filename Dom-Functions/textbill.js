@@ -1,17 +1,18 @@
 function textBillTotal(){
+
     var callsTotal = 0;
     var smsTotal = 0;
-
-    // var totalCost = callsTotal + smsTotal;
     
-    function textBills(billTypeEntered){
-    // var billTypeEntered = billTypeEntered.value.trim();
+    function textBills(bill){
+
+    var billTypeEntered = bill;
+
     if (billTypeEntered === "call"){
         callsTotal += 2.75;
     }
     else if (billTypeEntered === "sms"){
         smsTotal += 0.75;
-    }
+        }
     
     }
 

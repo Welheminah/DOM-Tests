@@ -8,7 +8,7 @@ function BillWithSettings(){
     var smsCostTotal = 0;
 
 
-    function setCallCost(callCost ){
+    function setCallCost(callCost){
         theCallCost = callCost;
     }
     function getCallCost(){
@@ -71,7 +71,7 @@ function BillWithSettings(){
 
     function totalClassName(){
         if (hasReachedCriticalLevel()) {
-            return "critical";
+            return "danger";
         }
 
         if (getTotalCost() >= getWarningLevel()) {
@@ -79,20 +79,35 @@ function BillWithSettings(){
         }
     }
 
+    function radioType(bill){
+        if(bill === 'call'){
+            makeCall();
+        }else if(bill === 'sms'){
+            sendSms();
+        }
+    }
+
     return {
         getCallCost,
         setCallCost,
+
         getSmsCost,
         setSmsCost,
+
         getWarningLevel,
         setWarningLevel,
+
         getCriticalLevel,
         setCriticalLevel,
+
         makeCall,
+        
         getTotalCost,
         getTotalCallCost,
         getTotalSmsCost,
+
         sendSms,
         totalClassName,
+        radioType
     }
 }

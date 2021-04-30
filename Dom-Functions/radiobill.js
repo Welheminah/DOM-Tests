@@ -4,11 +4,6 @@ function textBillTotals(){
     var smsesTotals = 0;
 
     function radioBillTotal(checkedRadioBtnElem){
-        
-        // var checkedRadioBtnElem = document.querySelector("input[name='billItemType']:checked");
-        // if (checkedRadioBtnElem){
-        
-        
         if (checkedRadioBtnElem === "call"){
             callsTotals += 2.75;
         }
@@ -35,7 +30,7 @@ function totalClassName(){
     if(totalCostings() >= 30 && totalCostings() < 50){
         return "warning";
     } else if(totalCostings() >= 50){
-        return "critical";
+        return "danger";
     }
 }
 

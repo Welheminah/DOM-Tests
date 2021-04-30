@@ -174,7 +174,7 @@ describe('The bill with settings factory function', function(){
         settingsBill.makeCall();
         
         
-        assert.equal("critical", settingsBill.totalClassName());
+        assert.equal("danger", settingsBill.totalClassName());
     });
 
     it("it should should stop the Total call cost from increasing when critical level had been reached", function(){
@@ -191,7 +191,7 @@ describe('The bill with settings factory function', function(){
         settingsBill.makeCall();
         
         
-        assert.equal("critical", settingsBill.totalClassName());
+        assert.equal("danger", settingsBill.totalClassName());
         assert.equal(10, settingsBill.getTotalCallCost());
     });
 
@@ -211,7 +211,7 @@ describe('The bill with settings factory function', function(){
         settingsBill.makeCall();
         
         
-        assert.equal("critical", settingsBill.totalClassName());
+        assert.equal("danger", settingsBill.totalClassName());
         assert.equal(10, settingsBill.getTotalCallCost());
 
         settingsBill.setCriticalLevel(20);

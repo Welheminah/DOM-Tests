@@ -56,7 +56,7 @@ describe('The totalPhoneBill for the Radio Bill Widget factory function', functi
             assert.equal("warning", radioWidget.totalClassName());
             
         });
-        it("it should return a class name of 'critical' if  critical level is reached(the amount is over 50)", function(){
+        it("it should return a class name of 'danger' if  critical level is reached(the amount is over 50)", function(){
             let radioWidget = textBillTotals();
 
             radioWidget.radioBillTotal("sms");
@@ -89,12 +89,10 @@ describe('The totalPhoneBill for the Radio Bill Widget factory function', functi
             radioWidget.radioBillTotal("call");
 
 
-            assert.equal("critical", radioWidget.totalClassName())
+            assert.equal("danger", radioWidget.totalClassName())
            
         });
     });
-    
-    
 
       
 });
